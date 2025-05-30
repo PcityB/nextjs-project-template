@@ -1,0 +1,18 @@
+# ClickHouse Configuration
+DB_ENGINE: clickhouse
+
+# ClickHouse Connection Settings
+CLICKHOUSE_HOST: localhost
+CLICKHOUSE_PORT: 9000
+CLICKHOUSE_DATABASE: histdata
+CLICKHOUSE_USER: default
+CLICKHOUSE_PASSWORD: ""  # Set your password here if required
+CLICKHOUSE_TABLE: exchange_rates
+
+# Import Settings
+batch_size: 5000  # Number of records to insert in a single batch
+delete_after_clickhouse: true  # Whether to delete source files after successful import
+cpu_utilization: max  # CPU utilization for parallel processing (low, medium, high, max, or 1-200)
+
+# Data Directory
+data_directory: ./data/  # Directory for storing downloaded and processed data
